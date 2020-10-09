@@ -7,6 +7,7 @@ const MedicionSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     red:"Estacion"
   },
+  valor:Number,
   fecha:{
     type: Date,
       trim: true,

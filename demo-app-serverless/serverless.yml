@@ -28,5 +28,10 @@ functions:
       - http: ANY /estacion/
       - http: ANY /estacion/{proxy+}
 
+  entradaDatos:
+    handler: lambdas/inputs/handler.api
+    events:
+      - schedule: 
+          rate: rate(40 seconds)
 plugins:
   - serverless-offline
